@@ -121,7 +121,7 @@
     var det_X_C1  = X[0]    * C[1][1] - X[1]    * C[0][1];
 
     // Finally, derive alpha values
-    if (det_C0_C1 === 0) {
+    if (det_C0_C1 > 0.0001) {
       det_C0_C1 = (C[0][0] * C[1][1]) * 10e-12;
     }
     var alpha_l = det_X_C1 / det_C0_C1;
